@@ -21,8 +21,8 @@ public class FoodCategoriesController : ControllerBase
     {
         const string queryText =
             """
-            SELECT food_category_id as FoodCategoryID,
-            food_category_name as FoodCategoryName
+            SELECT id as Id,
+            name as Name
             FROM FoodCategories;
             """;
         var result = await _connection.QueryAsync<FoodCategory>(queryText);
